@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur mon Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+				<li><a href="#Remerciement">Remerciement</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <p>Je suis un développeur web passionné spécialisé en HTML, CSS et JavaScript.
+		je m'appel GUIMBOU OKEIFUFE OBINNA SYLVESTRE, agé de 26ans expert en Réseau Telecom et Administrateur Système.
+		j'ai été former par LeeRoy expert Senior en Informatique/Programmation.</p>
+    </section>
+    
+    <section id="projects">
+        <h2>Mes Projets</h2>
+        <div class="project">
+            <h3>Projet 1</h3>
+            <p>Apprendre le HTML/CSS et JavaScript.</p>
+        </div>
+        <div class="project">
+            <h3>Projet 2</h3>
+            <p>Progression en Programmation OB.</p>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contactez-moi</h2>
+        <form id="contact-form">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Envoyer</button>
+            <p class="success-message">Message envoyé avec succès !</p>
+        </form>
+    </section>
+	<section id="remerciement">
+	<h2>Remerciement</h2>
+	<p>Je tiens à exprimer mes sincères remerciements au meilleur professeur, Senior Informatique LeeRoy.
+Malgré le temps écoulé, il est resté attentif à ma progression, et j'ai eu la chance de bénéficier de cette formation gratuite.
+Les mots me manquent pour exprimer toute ma gratitude envers Senior LeeRoy.
+Je recommande vivement ce professeur à toute personne désireuse d'évoluer et de s'épanouir dans ce domaine</p>
+	</section>
+    
+    <footer>
+        <p>&copy; 12/02/2025 - Mon Portfolio</p>
+    </footer>
+    
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêche l'envoi classique du formulaire
+            
+            let successMessage = document.querySelector(".success-message");
+            successMessage.style.display = "block";
+            
+            setTimeout(() => {
+                successMessage.style.display = "none";
+            }, 3000);
+            
+            this.reset(); // Réinitialise le formulaire
+        });
+    </script>
+</body>
+</html>
